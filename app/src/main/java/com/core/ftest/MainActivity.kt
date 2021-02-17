@@ -26,23 +26,23 @@ class MainActivity : AppCompatActivity() {
                 var password = it?.userPassword
                 var confirmPassword = it?.userConfirmPassword
 
-                email ?: activityMainBinding.userEmail.setError("Enter  Email")
-                password ?: activityMainBinding.userPassword.setError("Enter  Password")
-                confirmPassword ?: activityMainBinding.userConfirmPassword.setError("Enter  Confirm Password")
+                email ?: activityMainBinding.userEmail.setError(getString(R.string.validEmail))
+                password ?: activityMainBinding.userPassword.setError(getString(R.string.validPassword))
+                confirmPassword ?: activityMainBinding.userConfirmPassword.setError(getString(R.string.validConfirmPassword))
 
 
 
                 email?.let {
                     if (!email!!.matches(emailPatteren.toRegex())) {
                         Log.e("TAG", "Enter Valid Email")
-                        activityMainBinding.userEmail.setError("Enter Valid Email")
+                        activityMainBinding.userEmail.setError(getString(R.string.validEmail))
                     } else if (password?.length!! <= 8) {
-                        activityMainBinding.userPassword.setError("Password Must Be Greater than Equal to 8")
+                        activityMainBinding.userPassword.setError(getString(R.string.lengthPassword))
 
                     } else if (!password.equals(confirmPassword)) {
-                        activityMainBinding.userPassword.setError("Password and Confirm Password is not matched")
+                        activityMainBinding.userPassword.setError(getString(R.string.matchPassword))
                     } else {
-                        Toast.makeText(this, "Welcome To App", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, getString(R.string.welcomeMsg), Toast.LENGTH_SHORT).show()
                     }
                 }
 

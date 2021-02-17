@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">FTest</string>
+    <string name="emailHint">Enter Email</string>
+    <string name="passwordHint">Enter Password</string>
+    <string name="confirmPasswordHint">Enter Confirm Password</string>
+    <string name="submit">Submit</string>
+    <string name="validEmail">Enter Email</string>
+    <string name="validPassword">Enter Password</string>
+    <string name="matchPassword">Password and Confirm Password is not matched</string>
+    <string name="lengthPassword">Password Must Be Greater than Equal to 8</string>
+    <string name="welcomeMsg">Welcome to Here!!!</string>
+    <string name="validConfirmPassword">Enter Confirm Password</string>
+
 </resources>

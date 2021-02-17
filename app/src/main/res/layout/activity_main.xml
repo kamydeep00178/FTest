@@ -19,7 +19,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:hint="Enter Email"
+        android:hint="@string/emailHint"
         android:inputType="textEmailAddress"
         android:layout_marginTop="10dp"
         android:id="@+id/userEmail"
@@ -32,7 +32,7 @@
 
 
     <EditText
-        android:hint="Enter Password"
+        android:hint="@string/passwordHint"
         android:inputType="textPassword"
         android:layout_marginTop="5dp"
         app:layout_constraintBottom_toTopOf="@+id/userEmail"
@@ -43,7 +43,7 @@
         android:text="@={userModel.userPassword}"
       />
     <EditText
-        android:hint="Enter Confirm Password"
+        android:hint="@string/confirmPasswordHint"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/userPassword"
         app:layout_constraintTop_toBottomOf="@+id/btnSubmit"
@@ -56,7 +56,7 @@
 
     <Button
         android:onClick="@{()->userModel.onClick()}"
-        android:text="Submit"
+        android:text="@string/submit"
         android:id="@+id/btnSubmit"
         app:layout_constraintTop_toBottomOf="@+id/userConfirmPassword"
         android:layout_width="match_parent"
